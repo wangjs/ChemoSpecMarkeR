@@ -1,0 +1,39 @@
+Package: ChemoSpecMarkeR
+Type: Package
+Title: Functions to Identify Biomarkers in NMR Spectra
+Version: 0.1.44
+Date: 2016-01-28
+Authors@R: c(person(given = "Bryan A.", family = "Hanson",
+	role = c("aut", "cre"), email = "hanson@depauw.edu"),
+	person(given = "Brian K.", family = "Saulnier", role = "ctb"))
+Description: A collection of functions for identifying biomarkers in NMR
+    spectra. Uses the \code{Spectra} class from the ChemoSpec package. There are two
+    types of analyses possible with this package. 1. A strategy based on clustering
+    of variables around latent components (via the \code{\link{ClustVarLV}}
+    package). As part of this strategy, there are functions to "shrinkwrap" spectra
+    so that non-informative peaks are eliminated. 2. A strategy based on the STOCSY
+    approach of Nicholson. Please refer to the functions for full references.
+License: GPL-3
+Depends:
+    R (>= 3.1)
+Imports:
+    reshape2,
+    signal,
+    EMD,
+    lattice,
+    ClustVarLV,
+    graphics,
+    ChemoSpec,
+    plyr,
+    exCon,
+    rgl,
+    js,
+    jsonlite
+Suggests:
+    SpecHelpers,
+    FactoMineR,
+    chemometrics
+URL: https://github.com/bryanhanson/ChemoSpecMarkeR
+ByteCompile: TRUE
+BugReports: https://github.com/bryanhanson/ChemoSpecMarker/issues
+RoxygenNote: 5.0.1
